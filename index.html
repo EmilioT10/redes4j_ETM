@@ -1,323 +1,286 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Redes de computadoras</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redes de Computadoras</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0f19;
+    --card:#111827;
+    --accent:#38bdf8;
+    --text:#e5e7eb;
+}
+
+body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+}
+
+/* HEADER */
+header{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header span{
+    color:var(--accent);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 10%;
+}
+
+h2{
+    border-left:4px solid var(--accent);
+    padding-left:10px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.card{
+    background:var(--card);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMÁGENES */
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    object-position:center;
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* IMÁGENES PRINCIPALES */
+.hero-img{
+    width:100%;
+    max-height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+/* CONTENIDO */
+.card-content{
+    padding:15px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td,th{
+    padding:10px;
+    border-bottom:1px solid #333;
+}
+
+/* 👉 CENTRAR SOLO LO NECESARIO */
+.topo td:nth-child(2){
+    text-align:center;
+}
+
+.osi td:nth-child(2){
+    text-align:center;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    opacity:0.6;
+}
+</style>
 </head>
-<body bgcolor="#00FA00" text="black">
-<h1>REDES DE COMPUTADORAS</h1>
-<h2>Origen de las redes</h2>
-<table>
-	<tr>
-		<td> 
-	<img src="origen.png" width="300"> 
-		 </td>
 
-		<td>
-		 <p style="text-align: justify;">  La historia de las redes de computadoras comenzó a finales de la década de 1950 con fines militares, evolucionando desde la transmisión telefónica hasta la creación de ARPANET en 1969, la primera red de conmutación de paquetes. El desarrollo clave del protocolo TCP/IP en los años 80 estandarizó las comunicaciones, dando paso a la creación de la World Wide Web en 1989 y a la actual Internet global.</p>
-		 </td>	
+<body>
 
-	</tr>
-</table>
+<nav>
+<a href="#origen">Origen</a>
+<a href="#def">Definición</a>
+<a href="#tipos">Tipos</a>
+<a href="#topo">Topologías</a>
+<a href="#medios">Medios</a>
+<a href="#disp">Dispositivos</a>
+<a href="#osi">OSI</a>
+<a href="#arquitectura">Arquitectura</a>
+</nav>
 
-<h2>Definición de las redes</h2>
-<table>
-<tr>
-	 
-<td>	
-<p style="text-align: justify;"> Una red de computadoras es un conjunto de dispositivos (computadoras, servidores, teléfonos, periféricos) interconectados entre sí, ya sea por cables o de forma inalámbrica, que comparten recursos, intercambian datos y permiten la comunicación. Su objetivo principal es optimizar el flujo de información y facilitar el trabajo colaborativo.</p>
-</td>
-	<td>  
-	<img src="redes.jpg" width="300">
-	</td>
-	</tr>
-		 </table>
+<header>
+<h1>Redes <span>de Computadoras</span></h1>
+<p>Información sobre redes y su funcionamiento</p>
+</header>
 
-<h2>Tipos de redes</h2>
-<table>
-<tr>
-<td>
-<h1>PAN</h1>
-<p style="text-align: justify;"> Conecta dispositivos cercanos a una sola persona (aprox. 1 a 10 metros), como un teléfono a unos auriculares Bluetooth o un portátil a un ratón inalámbrico.</p>
-<td> <img src="PAN.jpg" width="150"></td>
-</tr>
-<tr>
-<td>
-<h1>LAN</h1>
-<p style="text-align: justify;"> Conecta equipos dentro de una área pequeña como un hogar, oficina o edificio. Se usa para compartir impresoras, archivos y conexión a internet Wi-Fi.</p>
-<td> <img src="LAN.png" width="150"></td>
-</tr>
-<tr>
-<td>
-<h1>MAN</h1>
-<p style="text-align: justify;"> Abarca un área geográfica mediana, como una ciudad o un campus universitario. Conecta varias LANs entre sí para ofrecer alta velocidad, por ejemplo, en redes municipales o de empresas con sedes cercanas.</p>
-
-<td> <img src="MAN.png" width="150"></td>
-</tr>
-<tr>
-<td>
-<h1>WAN</h1>
-<p style="text-align: justify;"> Conecta redes LAN y MAN a través de grandes distancias geográficas (países o continentes). Internet es la WAN más grande.
+<section id="origen">
+<h2>Origen</h2>
+<img src="origen.png" class="hero-img">
+<p>
+Las redes surgieron en los años 50 con fines militares. En 1969 nació ARPANET. 
+El protocolo TCP/IP permitió la expansión global y en 1989 se creó la Web.
 </p>
-<td> <img src="WAN.png" width="150"></td>
-</tr>
+</section>
+
+<section id="def">
+<h2>Definición</h2>
+<img src="redes.jpg" class="hero-img">
+<p>
+Una red es un conjunto de dispositivos interconectados que comparten información y recursos.
+</p>
+</section>
+
+<section id="tipos">
+<h2>Tipos de Redes</h2>
+<div class="grid">
+
+<div class="card">
+<img src="PAN.jpg">
+<div class="card-content">
+<h3>PAN</h3>
+<p>Red personal de corto alcance.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="LAN.png">
+<div class="card-content">
+<h3>LAN</h3>
+<p>Red local en hogares y oficinas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="MAN.png">
+<div class="card-content">
+<h3>MAN</h3>
+<p>Red de ciudad.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="WAN.png">
+<div class="card-content">
+<h3>WAN</h3>
+<p>Red global como Internet.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="topo">
+<h2>Topologías</h2>
+<table class="topo">
+<tr><th>Tipo</th><th>Descripción</th></tr>
+<tr><td>Bus</td><td>Un solo cable central.</td></tr>
+<tr><td>P2P</td><td>Conexión directa entre nodos.</td></tr>
+<tr><td>Estrella</td><td>Nodo central.</td></tr>
+<tr><td>Anillo</td><td>Forma circular.</td></tr>
+<tr><td>Malla</td><td>Alta redundancia.</td></tr>
+<tr><td>Árbol</td><td>Estructura jerárquica.</td></tr>
+<tr><td>Mixta</td><td>Combinación de varias.</td></tr>
 </table>
+</section>
 
-<h2>Topologias</h2>
+<section id="osi">
+<h2>Modelo OSI</h2>
 
-<table border="1"> 
+<p>El modelo OSI es un sistema de 7 capas que permite la comunicación entre dispositivos.</p>
 
-<tr>
- <td>BUS</td> 
- <td>Todos los dispositivos se conectan a un único cable central o troncal (backbone). Es sencilla, pero si el cable central falla, toda la red se cae.</td>
-</tr>
-
-<tr>
-<td>P2P</td> 
-<td>Conecta dos nodos directamente, facilitando una transmisión rápida y eficiente entre ellos.</td>
-</tr>
-
-<tr>
-	<td>ESTRELLA</td>
-	<td>Todos los nodos se conectan a un dispositivo central (switch o hub), facilitando la gestión y administración de la red. Si falla un cable, solo ese nodo se desconecta.</td>
-</tr>
-
-<tr>
-	<td>ANILLO</td>
-	<td>Los nodos se conectan en círculo, donde cada dispositivo tiene un par de vecinos, transmitiendo la información en una sola dirección.</td>
-</tr>
-
-<tr>
-	<td>MALLA</td>
-	<td> Los nodos están interconectados entre sí, lo que ofrece alta redundancia y confiabilidad. Si una ruta falla, los datos toman otra.</td>
-</tr>
-
-<tr>
-	<td>ARBOL</td>
-	<td>Los nodos están colocados en forma de árbol, similar a una combinación de varias estrellas. Ideal para redes jerárquicas.</td>
-</tr>
-
-<tr>
-	<td>MIXTA</td>
-	<td>Combina dos o más topologías diferentes en una misma infraestructura.</td>
-</tr>
-
+<table class="osi">
+<tr><th>Capa</th><th>Función</th></tr>
+<tr><td>Física</td><td>Transmite señales eléctricas o luz.</td></tr>
+<tr><td>Enlace de Datos</td><td>Controla errores y comunicación.</td></tr>
+<tr><td>Red</td><td>Determina rutas y direcciones IP.</td></tr>
+<tr><td>Transporte</td><td>Asegura la entrega de datos.</td></tr>
+<tr><td>Sesión</td><td>Administra conexiones.</td></tr>
+<tr><td>Presentación</td><td>Traduce y cifra datos.</td></tr>
+<tr><td>Aplicación</td><td>Interacción con el usuario.</td></tr>
 </table>
+</section>
 
- <h2>Medios de Conexion</h2>
+<section id="arquitectura">
+<h2>Arquitectura</h2>
 
- <table border="1">
- 	<tr>
- 		<th rowspan="4"> Conexion Guiada</th>
- 	</tr>
+<div class="grid">
 
- 	<tr>
- 		<td>Fibra Óptica </td>
- 		<td> Transmite pulsos de luz, siendo el medio más rápido y de mayor capacidad, ideal para largas distancias.</td>
- 		<img src="" width="100">
- 	</tr>
- 	
- 	<tr>
- 		<td>Cable de Par Trenzado (UTP/STP)</td>
- 		<td> Es el estándar común en redes LAN y conexión de ordenadores al router.</td>
- 		<img src="" width="100">
- 	</tr>
- 	
- 	<tr>
- 		<td>Cable Coaxial</td>
- 		<td>Utilizado principalmente en televisión por cable y antenas.</td>
- 		<img src="" width="100">
- 	</tr>
+<div class="card">
+<div class="card-content">
+<h3>Cliente - Servidor</h3>
+<p><b>Estructura:</b> Servidor central.</p>
+<p><b>Funcionamiento:</b> Cliente solicita y servidor responde.</p>
+<p><b>Ventajas:</b> Seguridad y control.</p>
+<p><b>Desventajas:</b> Dependencia del servidor.</p>
+<p><b>Ejemplos:</b> Google, Facebook.</p>
+</div>
+</div>
 
- 	<tr>
- 		<th rowspan="6"> Conexion No Guiada</th>
- 	</tr>
+<div class="card">
+<div class="card-content">
+<h3>P2P</h3>
+<p><b>Estructura:</b> Todos iguales.</p>
+<p><b>Funcionamiento:</b> Comparten recursos.</p>
+<p><b>Ventajas:</b> Bajo costo.</p>
+<p><b>Desventajas:</b> Menor seguridad.</p>
+<p><b>Ejemplos:</b> Torrent.</p>
+</div>
+</div>
 
- 	<tr>
- 		<td>Wi-Fi</td>
- 		<td>Conexión inalámbrica para redes locales (WLAN), proporcionando libertad de movimiento.</td>
- 		<img src="" width="100">
- 	</tr>
- 	
- 	<tr>
- 		<td>Bluetooth</td>
- 		<td>Tecnología de corto alcance para periféricos y dispositivos personales (PAN).
-Redes Móviles (4G/5G): Acceso a internet rápido mediante tecnología celular.</td>
-<img src="" width="100">
- 	</tr>
- 	
- 	<tr>
- 		<td>Satélite</td>
- 		<td>Conexión para áreas extensas o remotas, útil para reducir la congestión terrestre.</td>
- 		<img src="" width="100">
- 	</tr>
- 	
- 	<tr>
- 		<td>Infrarojos</td>
- 		<td> Transmiten datos a corta distancia mediante luz infrarroja, requiriendo visión directa, común en mandos a distancia. </td>
- 		<img src="" width="100">
- 	</tr>
- 	
- 	<tr>
- 		<td>Microondas</td>
- 		<td>Utilizan antenas parabólicas en línea de vista para conectar dos puntos fijos, útiles para telefonía y transmisión de datos a larga distancia.</td>
- 		<img src="" width="100">
- 	</tr>
+</div>
+</section>
 
- </table>
-
-<h1>Dispositivos de Interconexion</h1>
-<table>
-	<tr>
-		<td>
-			<h2>Router (Enrutador):</h2>
-			<p>Conecta redes diferentes, determina la mejor ruta para enviar paquetes de datos y funciona en la capa de red.</p>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Switch (Conmutador):</h2>
-			<p> Interconecta equipos dentro de una misma red local (LAN), dirigiendo datos eficientemente a través de direcciones MAC.</p>
-		</td>
-		<td> <img src="" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Bridge (Puente):</h2>
-			<p>Conecta segmentos de red, dividiendo redes grandes en otras más pequeñas y reduciendo el tráfico.</p>
-			<td> <img src="" width="150"></td>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Hub (Concentrador):</h2>
-			<p>Dispositivo básico que repite la señal recibida en un puerto a todos los demás, utilizado para conectar múltiples equipos, aunque es menos eficiente que un switch.</p>
-			<td> <img src="" width="150"></td>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Repetidor:</h2>
-			<p> Amplifica o regenera la señal física para extender la distancia de la red sin pérdida de calidad.</p>
-			<td> <img src="" width="150"></td>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Gateway (Pasarela):</h2>
-			<p>Permite la conexión entre redes con protocolos y arquitecturas totalmente diferentes, actuando en todos los niveles del modelo OSI.</p>
-			<td> <img src="" width="150"></td>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Módem:</h2>
-			<p>Convierte señales digitales de un equipo en analógicas (y viceversa) para la transmisión a través de líneas telefónicas u otros medios.</p>
-			<td> <img src="" width="150"></td>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<h2>Punto de Acceso (Access Point):</h2>
-			<p>Permite la conexión de dispositivos inalámbricos a una red cableada.</p>
-		</td>
-		<td> <img src="" width="150"></td>
-	</tr>
-
-
-</table>
-
-<h1>El modelo OSI (Open Systems Interconnection) </h1>
-<p>Es un marco conceptual de 7 capas, creado por la ISO en 1984, que estandariza las funciones de comunicación de red. Permite que sistemas heterogéneos se conecten y comuniquen, dividiendo el proceso en niveles (desde lo físico a la aplicación) para facilitar la interoperabilidad.</p>
-
-<h2>Las 7 Capas del Modelo OSI</h2>
-<table>
-	<tr>
-		<td>
-			<h3>Capa Física (1):</h3>
-			<p>Transmisión de datos brutos a través de medios físicos (cables, señales eléctricas/luz).</p>
-		</td>
-		<td> <img src="capa1.jpg" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h3>Capa de Enlace de Datos (2):</h3>
-			<p>Transfiere datos entre nodos de red adyacentes y gestiona la detección de errores.</p>
-		</td>
-		<td> <img src="capa2.png" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h3>Capa de Red (3):</h3>
-			<p>Determina la ruta física de los datos (enrutamiento) y direccionamiento lógico (IP).</p>
-		</td>
-		<td> <img src="capa3.png" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h3>Capa de Transporte (4):</h3>
-			<p>Gestiona la transferencia de datos (TCP/UDP), control de flujo y corrección de errores.</p>
-		</td>
-		<td> <img src="capa4.png" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h3>Capa de Sesión (5):</h3>
-			<p>Establece, gestiona y finaliza las conexiones entre dispositivos.</p>
-		</td>
-		<td> <img src="capa5.png" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h3>Capa de Presentación (6):</h3>
-			<p> Traduce, cifra y comprime los datos para que sean interpretables por la red.</p>
-		</td>
-		<td> <img src="capa6.png" width="150"></td>
-	</tr>
-
-	<tr>
-		<td>
-			<h3>Capa de Aplicación (7):</h3>
-			<p>Interfaz directa con las aplicaciones de software (navegadores, correos).</p>
-		</td>
-		<td> <img src="capa7.png" width="150"></td>
-	</tr>
-
-</table>
-
-<h2>Cliente-Servidor:</h2>
-<h3>Funcionamiento:</h3>
-<p>Un cliente (navegador, app) solicita datos y el servidor (base de datos, servidor web) los procesa y responde.</p>
-<h3>Ventajas:</h3>
-<p> Fácil administración, seguridad centralizada, respaldo de datos consistente.</p>
-<h3>Desventajas:</h3>
-<p> Si el servidor cae, los servicios se detienen; dependencia de la capacidad del servidor.</p>
-<h3>Ejemplos:</h3>
-<p>Navegar en una web, correo electrónico (Gmail), acceso a bases de datos corporativas.</p>
-
-
-<h2>Cliente-Cliente:</h2>
-<h3>Funcionamiento:</h3>
-<p>Todos los nodos de la red (pares/peers) tienen los mismos privilegios y capacidades. Un cliente puede descargar archivos de otro y viceversa.</p>
-<h3>Ventajas:</h3>
-<p>Mayor resiliencia (no depende de un servidor central), escalabilidad (a más usuarios, más recursos), menor costo de infraestructura.</p>
-<h3>Desventajas:</h3>
-<p>Gestión de seguridad compleja, menor control sobre los datos, rendimiento variable.</p>
-<h3>Ejemplos:</h3>
-<p> Redes BitTorrent, Blockchain (Bitcoin), aplicaciones de chat directo.</p>
+<footer>
+<p>Redes de Computadoras | 2026</p>
+</footer>
 
 </body>
 </html>
