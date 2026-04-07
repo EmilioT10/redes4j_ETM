@@ -132,17 +132,19 @@ footer{
 
 <header>
 <h1>Redes <span>de Computadoras</span></h1>
-<p>Estudio completo sobre comunicación digital</p>
+<p>Guía completa sobre comunicación digital y redes</p>
 </header>
 
 <section id="origen">
 <h2>Origen</h2>
 <img src="origen.png" class="hero-img">
 <p>
-Las redes de computadoras tienen su origen en la década de 1950, cuando surgió la necesidad de compartir información entre sistemas militares y científicos. 
-Uno de los hitos más importantes fue la creación de ARPANET en 1969, considerada la primera red de computadoras moderna. 
-Durante los años 80 se desarrolló el protocolo TCP/IP, el cual permitió la interconexión de redes a nivel mundial. 
-Finalmente, en 1989, Tim Berners-Lee creó la World Wide Web, lo que facilitó el acceso a la información y dio lugar al internet que conocemos hoy.
+Las redes de computadoras surgieron a mediados del siglo XX con el objetivo de permitir la comunicación entre sistemas informáticos.
+Inicialmente se desarrollaron con fines militares durante la Guerra Fría, donde era necesario mantener la comunicación incluso si una parte de la red fallaba.
+ARPANET, creada en 1969, fue la primera red en utilizar conmutación de paquetes.
+En los años 80 se desarrolló el protocolo TCP/IP, que permitió la conexión de múltiples redes.
+Posteriormente, en 1989, se creó la World Wide Web, facilitando el acceso global a la información.
+Actualmente, las redes son fundamentales en áreas como educación, comercio electrónico, redes sociales y entretenimiento.
 </p>
 </section>
 
@@ -150,9 +152,10 @@ Finalmente, en 1989, Tim Berners-Lee creó la World Wide Web, lo que facilitó e
 <h2>Definición</h2>
 <img src="redes.jpg" class="hero-img">
 <p>
-Una red de computadoras es un sistema formado por múltiples dispositivos interconectados entre sí mediante diferentes medios de transmisión. 
-Estos dispositivos pueden compartir recursos como archivos, impresoras, servicios y conexión a internet. 
-Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimizando procesos y facilitando el trabajo colaborativo.
+Una red de computadoras es un conjunto de dispositivos electrónicos interconectados que pueden comunicarse entre sí para compartir datos y recursos.
+Estos dispositivos incluyen computadoras, servidores, teléfonos móviles, impresoras y otros equipos.
+Las redes permiten el acceso a servicios como internet, almacenamiento en la nube, correo electrónico y videoconferencias.
+Su principal objetivo es mejorar la eficiencia, facilitar la comunicación y optimizar el uso de recursos.
 </p>
 </section>
 
@@ -160,37 +163,21 @@ Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimiz
 <h2>Tipos de Redes</h2>
 <div class="grid">
 
-<div class="card">
-<img src="PAN.jpg">
-<div class="card-content">
-<h3>PAN</h3>
-<p>Red personal que conecta dispositivos cercanos como teléfonos, audífonos o laptops mediante Bluetooth o USB.</p>
-</div>
-</div>
+<div class="card"><img src="PAN.jpg"><div class="card-content"><h3>PAN</h3><p>Red personal que conecta dispositivos cercanos como audífonos Bluetooth, teléfonos o laptops. Ejemplo: conectar tu celular a unos audífonos inalámbricos.</p></div></div>
 
-<div class="card">
-<img src="LAN.png">
-<div class="card-content">
-<h3>LAN</h3>
-<p>Red de área local utilizada en hogares, escuelas u oficinas para compartir recursos y conexión a internet.</p>
-</div>
-</div>
+<div class="card"><img src="LAN.png"><div class="card-content"><h3>LAN</h3><p>Red de área local utilizada en hogares, escuelas y oficinas. Permite compartir archivos, impresoras y conexión a internet. Ejemplo: red Wi-Fi de una casa.</p></div></div>
 
-<div class="card">
-<img src="MAN.png">
-<div class="card-content">
-<h3>MAN</h3>
-<p>Red que cubre una ciudad o campus, conectando múltiples redes locales con alta velocidad.</p>
-</div>
-</div>
+<div class="card"><img src="MAN.png"><div class="card-content"><h3>MAN</h3><p>Red que cubre una ciudad o campus universitario. Ejemplo: red de internet municipal.</p></div></div>
 
-<div class="card">
-<img src="WAN.png">
-<div class="card-content">
-<h3>WAN</h3>
-<p>Red de gran alcance que conecta países o continentes, siendo Internet el ejemplo más importante.</p>
-</div>
-</div>
+<div class="card"><img src="WAN.png"><div class="card-content"><h3>WAN</h3><p>Red de gran alcance que conecta diferentes países. Ejemplo: Internet.</p></div></div>
+
+<div class="card"><img src="wifi.jpg"><div class="card-content"><h3>WLAN</h3><p>Red local inalámbrica basada en Wi-Fi. Ejemplo: conexión de una laptop sin cables.</p></div></div>
+
+<div class="card"><img src="SAN.jpg"><div class="card-content"><h3>SAN</h3><p>Red especializada en almacenamiento de datos de alto rendimiento usada en empresas.</p></div></div>
+
+<div class="card"><img src="VPN.jpg"><div class="card-content"><h3>VPN</h3><p>Red privada virtual que permite navegar de forma segura y privada a través de internet.</p></div></div>
+
+<div class="card"><img src="CAN.jpg"><div class="card-content"><h3>CAN</h3><p>Red de campus que conecta varias LAN dentro de una institución educativa.</p></div></div>
 
 </div>
 </section>
@@ -199,13 +186,12 @@ Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimiz
 <h2>Topologías</h2>
 <table class="topo">
 <tr><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>Bus</td><td>Todos los dispositivos comparten un solo canal de comunicación, lo que facilita la instalación pero reduce la confiabilidad.</td></tr>
-<tr><td>P2P</td><td>Los dispositivos se conectan directamente entre sí sin necesidad de un servidor central.</td></tr>
-<tr><td>Estrella</td><td>Todos los dispositivos se conectan a un nodo central que administra la comunicación.</td></tr>
-<tr><td>Anillo</td><td>Los dispositivos están conectados en forma circular y los datos viajan en una dirección.</td></tr>
-<tr><td>Malla</td><td>Todos los nodos están interconectados, ofreciendo alta redundancia y seguridad.</td></tr>
-<tr><td>Árbol</td><td>Estructura jerárquica que combina varias redes en forma de ramas.</td></tr>
-<tr><td>Mixta</td><td>Combinación de diferentes topologías para mejorar el rendimiento.</td></tr>
+<tr><td>Bus</td><td>Todos los dispositivos comparten un único canal. Es económica pero poco confiable.</td></tr>
+<tr><td>Estrella</td><td>Todos los nodos se conectan a un dispositivo central (switch). Es la más usada actualmente.</td></tr>
+<tr><td>Anillo</td><td>Los dispositivos forman un círculo. Los datos circulan en una sola dirección.</td></tr>
+<tr><td>Malla</td><td>Cada dispositivo está conectado con varios otros. Ofrece alta seguridad.</td></tr>
+<tr><td>Árbol</td><td>Estructura jerárquica utilizada en redes grandes.</td></tr>
+<tr><td>Mixta</td><td>Combinación de varias topologías para mejorar el rendimiento.</td></tr>
 </table>
 </section>
 
@@ -213,37 +199,17 @@ Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimiz
 <h2>Medios de Conexión</h2>
 <div class="grid">
 
-<div class="card">
-<img src="descargar.jpg">
-<div class="card-content">
-<h3>Fibra Óptica</h3>
-<p>Utiliza luz para transmitir datos a gran velocidad y largas distancias con mínima interferencia.</p>
-</div>
-</div>
+<div class="card"><img src="descargar.jpg"><div class="card-content"><h3>Fibra Óptica</h3><p>Utiliza luz para transmitir datos a gran velocidad. Ejemplo: internet de alta velocidad.</p></div></div>
 
-<div class="card">
-<img src="par.jpg">
-<div class="card-content">
-<h3>Par Trenzado</h3>
-<p>Cable utilizado en redes LAN, económico y fácil de instalar.</p>
-</div>
-</div>
+<div class="card"><img src="par.jpg"><div class="card-content"><h3>Par Trenzado</h3><p>Cable común en redes LAN. Ejemplo: cable Ethernet.</p></div></div>
 
-<div class="card">
-<img src="wifi.jpg">
-<div class="card-content">
-<h3>Wi-Fi</h3>
-<p>Tecnología inalámbrica que permite conectar dispositivos sin cables.</p>
-</div>
-</div>
+<div class="card"><img src="wifi.jpg"><div class="card-content"><h3>Wi-Fi</h3><p>Permite conexión inalámbrica en hogares y oficinas.</p></div></div>
 
-<div class="card">
-<img src="blue.jpg">
-<div class="card-content">
-<h3>Bluetooth</h3>
-<p>Conexión de corto alcance usada en dispositivos personales.</p>
-</div>
-</div>
+<div class="card"><img src="blue.jpg"><div class="card-content"><h3>Bluetooth</h3><p>Conexión inalámbrica de corto alcance.</p></div></div>
+
+<div class="card"><img src="SATE.jpg"><div class="card-content"><h3>Satélite</h3><p>Utilizado en zonas rurales o remotas.</p></div></div>
+
+<div class="card"><img src="MIC.png"><div class="card-content"><h3>Microondas</h3><p>Transmisión inalámbrica mediante antenas.</p></div></div>
 
 </div>
 </section>
@@ -252,17 +218,17 @@ Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimiz
 <h2>Dispositivos</h2>
 <div class="grid">
 
-<div class="card"><div class="card-content"><h3>Router</h3><p>Encargado de dirigir el tráfico de datos entre redes diferentes.</p></div></div>
+<div class="card"><div class="card-content"><h3>Router</h3><p>Conecta redes diferentes y dirige el tráfico de datos.</p></div></div>
 
-<div class="card"><div class="card-content"><h3>Switch</h3><p>Conecta dispositivos dentro de una red local y envía datos de manera eficiente.</p></div></div>
+<div class="card"><div class="card-content"><h3>Switch</h3><p>Conecta dispositivos en una red local y mejora la eficiencia.</p></div></div>
 
-<div class="card"><div class="card-content"><h3>Hub</h3><p>Dispositivo básico que distribuye datos a todos los equipos.</p></div></div>
+<div class="card"><div class="card-content"><h3>Hub</h3><p>Distribuye datos a todos los dispositivos sin control.</p></div></div>
 
-<div class="card"><div class="card-content"><h3>Módem</h3><p>Convierte señales digitales y analógicas para la comunicación.</p></div></div>
+<div class="card"><div class="card-content"><h3>Módem</h3><p>Convierte señales digitales y analógicas.</p></div></div>
 
-<div class="card"><div class="card-content"><h3>Bridge</h3><p>Divide una red en segmentos más pequeños para mejorar el rendimiento.</p></div></div>
+<div class="card"><div class="card-content"><h3>Access Point</h3><p>Permite conexión inalámbrica a una red cableada.</p></div></div>
 
-<div class="card"><div class="card-content"><h3>Gateway</h3><p>Permite la comunicación entre redes con diferentes protocolos.</p></div></div>
+<div class="card"><div class="card-content"><h3>Firewall</h3><p>Protege la red contra accesos no autorizados.</p></div></div>
 
 </div>
 </section>
@@ -271,45 +237,44 @@ Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimiz
 <h2>Modelo OSI</h2>
 
 <p>
-El modelo OSI divide el proceso de comunicación en siete capas, facilitando la interoperabilidad entre sistemas.
+El modelo OSI divide la comunicación en 7 capas, facilitando la interoperabilidad entre sistemas y permitiendo detectar errores más fácilmente.
 </p>
 
 <table class="osi">
 <tr><th>Capa</th><th>Función</th></tr>
-<tr><td>Física</td><td>Transmisión de bits a través de medios físicos.</td></tr>
-<tr><td>Enlace de Datos</td><td>Control de errores y acceso al medio.</td></tr>
-<tr><td>Red</td><td>Enrutamiento y direccionamiento lógico.</td></tr>
-<tr><td>Transporte</td><td>Entrega confiable de datos.</td></tr>
-<tr><td>Sesión</td><td>Control de sesiones de comunicación.</td></tr>
-<tr><td>Presentación</td><td>Traducción, cifrado y compresión de datos.</td></tr>
-<tr><td>Aplicación</td><td>Interfaz con el usuario.</td></tr>
+<tr><td>Física</td><td>Transmisión de señales.</td></tr>
+<tr><td>Enlace</td><td>Control de errores.</td></tr>
+<tr><td>Red</td><td>Direccionamiento IP.</td></tr>
+<tr><td>Transporte</td><td>Entrega confiable.</td></tr>
+<tr><td>Sesión</td><td>Control de sesiones.</td></tr>
+<tr><td>Presentación</td><td>Formato y cifrado.</td></tr>
+<tr><td>Aplicación</td><td>Interacción con usuario.</td></tr>
 </table>
 </section>
 
 <section id="arquitectura">
 <h2>Arquitectura</h2>
-
 <div class="grid">
 
 <div class="card">
 <div class="card-content">
 <h3>Cliente - Servidor</h3>
-<p><b>Estructura:</b> Un servidor central gestiona recursos.</p>
-<p><b>Funcionamiento:</b> Los clientes envían solicitudes y el servidor responde.</p>
-<p><b>Ventajas:</b> Seguridad, control y escalabilidad.</p>
-<p><b>Desventajas:</b> Dependencia del servidor y costo.</p>
-<p><b>Ejemplos:</b> Google, Facebook, servicios web.</p>
+<p><b>Estructura:</b> Un servidor central proporciona servicios.</p>
+<p><b>Funcionamiento:</b> El cliente envía solicitudes y el servidor responde.</p>
+<p><b>Ventajas:</b> Seguridad, control, escalabilidad.</p>
+<p><b>Desventajas:</b> Dependencia del servidor.</p>
+<p><b>Ejemplos:</b> Google, Netflix, páginas web.</p>
 </div>
 </div>
 
 <div class="card">
 <div class="card-content">
 <h3>P2P</h3>
-<p><b>Estructura:</b> Todos los nodos son iguales.</p>
-<p><b>Funcionamiento:</b> Intercambio directo de recursos.</p>
-<p><b>Ventajas:</b> Bajo costo y fácil implementación.</p>
-<p><b>Desventajas:</b> Menor seguridad y control.</p>
-<p><b>Ejemplos:</b> Torrent, redes de intercambio.</p>
+<p><b>Estructura:</b> Todos los nodos tienen el mismo rol.</p>
+<p><b>Funcionamiento:</b> Compartición directa de archivos.</p>
+<p><b>Ventajas:</b> Bajo costo, fácil uso.</p>
+<p><b>Desventajas:</b> Baja seguridad.</p>
+<p><b>Ejemplos:</b> Torrent.</p>
 </div>
 </div>
 
