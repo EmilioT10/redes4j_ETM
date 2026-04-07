@@ -22,7 +22,6 @@ body{
     color:var(--text);
 }
 
-/* NAV */
 nav{
     position:fixed;
     width:100%;
@@ -38,7 +37,6 @@ nav a{
     text-decoration:none;
 }
 
-/* HEADER */
 header{
     height:100vh;
     display:flex;
@@ -56,7 +54,6 @@ header span{
     color:var(--accent);
 }
 
-/* SECTIONS */
 section{
     padding:80px 10%;
 }
@@ -66,40 +63,25 @@ h2{
     padding-left:10px;
 }
 
-/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-/* CARD */
 .card{
     background:var(--card);
     border-radius:15px;
     overflow:hidden;
-    transition:0.3s;
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-.card:hover{
-    transform:translateY(-5px);
-}
-
-/* IMÁGENES */
 .card img{
     width:100%;
     height:180px;
     object-fit:cover;
-    object-position:center;
-    transition:0.4s;
 }
 
-.card:hover img{
-    transform:scale(1.05);
-}
-
-/* IMÁGENES PRINCIPALES */
 .hero-img{
     width:100%;
     max-height:300px;
@@ -108,12 +90,10 @@ h2{
     margin-bottom:15px;
 }
 
-/* CONTENIDO */
 .card-content{
     padding:15px;
 }
 
-/* TABLE */
 table{
     width:100%;
     border-collapse:collapse;
@@ -125,20 +105,14 @@ td,th{
     border-bottom:1px solid #333;
 }
 
-/* 👉 CENTRAR SOLO LO NECESARIO */
-.topo td:nth-child(2){
-    text-align:center;
-}
-
+.topo td:nth-child(2),
 .osi td:nth-child(2){
     text-align:center;
 }
 
-/* FOOTER */
 footer{
     text-align:center;
     padding:20px;
-    opacity:0.6;
 }
 </style>
 </head>
@@ -158,15 +132,17 @@ footer{
 
 <header>
 <h1>Redes <span>de Computadoras</span></h1>
-<p>Información sobre redes y su funcionamiento</p>
+<p>Estudio completo sobre comunicación digital</p>
 </header>
 
 <section id="origen">
 <h2>Origen</h2>
 <img src="origen.png" class="hero-img">
 <p>
-Las redes surgieron en los años 50 con fines militares. En 1969 nació ARPANET. 
-El protocolo TCP/IP permitió la expansión global y en 1989 se creó la Web.
+Las redes de computadoras tienen su origen en la década de 1950, cuando surgió la necesidad de compartir información entre sistemas militares y científicos. 
+Uno de los hitos más importantes fue la creación de ARPANET en 1969, considerada la primera red de computadoras moderna. 
+Durante los años 80 se desarrolló el protocolo TCP/IP, el cual permitió la interconexión de redes a nivel mundial. 
+Finalmente, en 1989, Tim Berners-Lee creó la World Wide Web, lo que facilitó el acceso a la información y dio lugar al internet que conocemos hoy.
 </p>
 </section>
 
@@ -174,7 +150,9 @@ El protocolo TCP/IP permitió la expansión global y en 1989 se creó la Web.
 <h2>Definición</h2>
 <img src="redes.jpg" class="hero-img">
 <p>
-Una red es un conjunto de dispositivos interconectados que comparten información y recursos.
+Una red de computadoras es un sistema formado por múltiples dispositivos interconectados entre sí mediante diferentes medios de transmisión. 
+Estos dispositivos pueden compartir recursos como archivos, impresoras, servicios y conexión a internet. 
+Las redes permiten la comunicación eficiente entre usuarios y sistemas, optimizando procesos y facilitando el trabajo colaborativo.
 </p>
 </section>
 
@@ -186,7 +164,7 @@ Una red es un conjunto de dispositivos interconectados que comparten informació
 <img src="PAN.jpg">
 <div class="card-content">
 <h3>PAN</h3>
-<p>Red personal de corto alcance.</p>
+<p>Red personal que conecta dispositivos cercanos como teléfonos, audífonos o laptops mediante Bluetooth o USB.</p>
 </div>
 </div>
 
@@ -194,7 +172,7 @@ Una red es un conjunto de dispositivos interconectados que comparten informació
 <img src="LAN.png">
 <div class="card-content">
 <h3>LAN</h3>
-<p>Red local en hogares y oficinas.</p>
+<p>Red de área local utilizada en hogares, escuelas u oficinas para compartir recursos y conexión a internet.</p>
 </div>
 </div>
 
@@ -202,7 +180,7 @@ Una red es un conjunto de dispositivos interconectados que comparten informació
 <img src="MAN.png">
 <div class="card-content">
 <h3>MAN</h3>
-<p>Red de ciudad.</p>
+<p>Red que cubre una ciudad o campus, conectando múltiples redes locales con alta velocidad.</p>
 </div>
 </div>
 
@@ -210,7 +188,7 @@ Una red es un conjunto de dispositivos interconectados que comparten informació
 <img src="WAN.png">
 <div class="card-content">
 <h3>WAN</h3>
-<p>Red global como Internet.</p>
+<p>Red de gran alcance que conecta países o continentes, siendo Internet el ejemplo más importante.</p>
 </div>
 </div>
 
@@ -221,30 +199,90 @@ Una red es un conjunto de dispositivos interconectados que comparten informació
 <h2>Topologías</h2>
 <table class="topo">
 <tr><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>Bus</td><td>Un solo cable central.</td></tr>
-<tr><td>P2P</td><td>Conexión directa entre nodos.</td></tr>
-<tr><td>Estrella</td><td>Nodo central.</td></tr>
-<tr><td>Anillo</td><td>Forma circular.</td></tr>
-<tr><td>Malla</td><td>Alta redundancia.</td></tr>
-<tr><td>Árbol</td><td>Estructura jerárquica.</td></tr>
-<tr><td>Mixta</td><td>Combinación de varias.</td></tr>
+<tr><td>Bus</td><td>Todos los dispositivos comparten un solo canal de comunicación, lo que facilita la instalación pero reduce la confiabilidad.</td></tr>
+<tr><td>P2P</td><td>Los dispositivos se conectan directamente entre sí sin necesidad de un servidor central.</td></tr>
+<tr><td>Estrella</td><td>Todos los dispositivos se conectan a un nodo central que administra la comunicación.</td></tr>
+<tr><td>Anillo</td><td>Los dispositivos están conectados en forma circular y los datos viajan en una dirección.</td></tr>
+<tr><td>Malla</td><td>Todos los nodos están interconectados, ofreciendo alta redundancia y seguridad.</td></tr>
+<tr><td>Árbol</td><td>Estructura jerárquica que combina varias redes en forma de ramas.</td></tr>
+<tr><td>Mixta</td><td>Combinación de diferentes topologías para mejorar el rendimiento.</td></tr>
 </table>
+</section>
+
+<section id="medios">
+<h2>Medios de Conexión</h2>
+<div class="grid">
+
+<div class="card">
+<img src="descargar.jpg">
+<div class="card-content">
+<h3>Fibra Óptica</h3>
+<p>Utiliza luz para transmitir datos a gran velocidad y largas distancias con mínima interferencia.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="par.jpg">
+<div class="card-content">
+<h3>Par Trenzado</h3>
+<p>Cable utilizado en redes LAN, económico y fácil de instalar.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="wifi.jpg">
+<div class="card-content">
+<h3>Wi-Fi</h3>
+<p>Tecnología inalámbrica que permite conectar dispositivos sin cables.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="blue.jpg">
+<div class="card-content">
+<h3>Bluetooth</h3>
+<p>Conexión de corto alcance usada en dispositivos personales.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="disp">
+<h2>Dispositivos</h2>
+<div class="grid">
+
+<div class="card"><div class="card-content"><h3>Router</h3><p>Encargado de dirigir el tráfico de datos entre redes diferentes.</p></div></div>
+
+<div class="card"><div class="card-content"><h3>Switch</h3><p>Conecta dispositivos dentro de una red local y envía datos de manera eficiente.</p></div></div>
+
+<div class="card"><div class="card-content"><h3>Hub</h3><p>Dispositivo básico que distribuye datos a todos los equipos.</p></div></div>
+
+<div class="card"><div class="card-content"><h3>Módem</h3><p>Convierte señales digitales y analógicas para la comunicación.</p></div></div>
+
+<div class="card"><div class="card-content"><h3>Bridge</h3><p>Divide una red en segmentos más pequeños para mejorar el rendimiento.</p></div></div>
+
+<div class="card"><div class="card-content"><h3>Gateway</h3><p>Permite la comunicación entre redes con diferentes protocolos.</p></div></div>
+
+</div>
 </section>
 
 <section id="osi">
 <h2>Modelo OSI</h2>
 
-<p>El modelo OSI es un sistema de 7 capas que permite la comunicación entre dispositivos.</p>
+<p>
+El modelo OSI divide el proceso de comunicación en siete capas, facilitando la interoperabilidad entre sistemas.
+</p>
 
 <table class="osi">
 <tr><th>Capa</th><th>Función</th></tr>
-<tr><td>Física</td><td>Transmite señales eléctricas o luz.</td></tr>
-<tr><td>Enlace de Datos</td><td>Controla errores y comunicación.</td></tr>
-<tr><td>Red</td><td>Determina rutas y direcciones IP.</td></tr>
-<tr><td>Transporte</td><td>Asegura la entrega de datos.</td></tr>
-<tr><td>Sesión</td><td>Administra conexiones.</td></tr>
-<tr><td>Presentación</td><td>Traduce y cifra datos.</td></tr>
-<tr><td>Aplicación</td><td>Interacción con el usuario.</td></tr>
+<tr><td>Física</td><td>Transmisión de bits a través de medios físicos.</td></tr>
+<tr><td>Enlace de Datos</td><td>Control de errores y acceso al medio.</td></tr>
+<tr><td>Red</td><td>Enrutamiento y direccionamiento lógico.</td></tr>
+<tr><td>Transporte</td><td>Entrega confiable de datos.</td></tr>
+<tr><td>Sesión</td><td>Control de sesiones de comunicación.</td></tr>
+<tr><td>Presentación</td><td>Traducción, cifrado y compresión de datos.</td></tr>
+<tr><td>Aplicación</td><td>Interfaz con el usuario.</td></tr>
 </table>
 </section>
 
@@ -256,22 +294,22 @@ Una red es un conjunto de dispositivos interconectados que comparten informació
 <div class="card">
 <div class="card-content">
 <h3>Cliente - Servidor</h3>
-<p><b>Estructura:</b> Servidor central.</p>
-<p><b>Funcionamiento:</b> Cliente solicita y servidor responde.</p>
-<p><b>Ventajas:</b> Seguridad y control.</p>
-<p><b>Desventajas:</b> Dependencia del servidor.</p>
-<p><b>Ejemplos:</b> Google, Facebook.</p>
+<p><b>Estructura:</b> Un servidor central gestiona recursos.</p>
+<p><b>Funcionamiento:</b> Los clientes envían solicitudes y el servidor responde.</p>
+<p><b>Ventajas:</b> Seguridad, control y escalabilidad.</p>
+<p><b>Desventajas:</b> Dependencia del servidor y costo.</p>
+<p><b>Ejemplos:</b> Google, Facebook, servicios web.</p>
 </div>
 </div>
 
 <div class="card">
 <div class="card-content">
 <h3>P2P</h3>
-<p><b>Estructura:</b> Todos iguales.</p>
-<p><b>Funcionamiento:</b> Comparten recursos.</p>
-<p><b>Ventajas:</b> Bajo costo.</p>
-<p><b>Desventajas:</b> Menor seguridad.</p>
-<p><b>Ejemplos:</b> Torrent.</p>
+<p><b>Estructura:</b> Todos los nodos son iguales.</p>
+<p><b>Funcionamiento:</b> Intercambio directo de recursos.</p>
+<p><b>Ventajas:</b> Bajo costo y fácil implementación.</p>
+<p><b>Desventajas:</b> Menor seguridad y control.</p>
+<p><b>Ejemplos:</b> Torrent, redes de intercambio.</p>
 </div>
 </div>
 
