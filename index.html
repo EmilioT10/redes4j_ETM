@@ -73,12 +73,13 @@ h2{
     background:var(--card);
     border-radius:15px;
     overflow:hidden;
+    text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .card img{
     width:100%;
-    height:180px;
+    height:160px;
     object-fit:cover;
 }
 
@@ -129,28 +130,32 @@ footer{
 
 <header>
 <h1>Redes <span>de Computadoras</span></h1>
-<p>Guía completa sobre comunicación digital y redes</p>
+<p>Guía completa sobre redes y cables Ethernet</p>
 </header>
 
 <section id="origen">
 <h2>Origen</h2>
-<img src="origen.png" class="hero-img">
-<p>Las redes de computadoras surgieron...</p>
+<img src="origen.png" height="450" width="1000">
+<p>La historia de las redes de computadoras comenzó a finales de los años 50 con fines militares, consolidándose en 1969 con ARPANET, la primera red de conmutación de paquetes. Evolucionó del uso de módems y protocolos básicos en los 70 y 80 a la estandarización de TCP/IP en 1983, sentando las bases para Internet. Hoy son fundamentales gracias a la fibra óptica, tecnologías inalámbricas y la expansión de la WWW.</p>
 </section>
 
 <section id="def">
 <h2>Definición</h2>
-<img src="redes.jpg" class="hero-img">
-<p>Una red de computadoras es un conjunto...</p>
+<img src="redes.jpg" height="400" width="500">
+<p>Una red de computadoras es un conjunto de dispositivos (computadoras, servidores, móviles) interconectados entre sí, ya sea por cables o señales inalámbricas. Su objetivo principal es intercambiar datos, compartir recursos (como impresoras o archivos) y facilitar la comunicación, utilizando protocolos de red para entenderse.</p>
 </section>
 
 <section id="tipos">
 <h2>Tipos de Redes</h2>
 <div class="grid">
 <div class="card"><img src="PAN.jpg"><div class="card-content"><h3>PAN</h3></div></div>
+<p>Una red de área personal (PAN, por sus siglas en inglés) es una red informática de corto alcance, generalmente limitada a unos pocos metros, que conecta dispositivos electrónicos personales como smartphones, computadoras portátiles, tabletas, auriculares y relojes inteligentes.</p>
 <div class="card"><img src="LAN.png"><div class="card-content"><h3>LAN</h3></div></div>
+<p>Una red de área local o LAN (Local Area Network) conecta dispositivos informáticos (ordenadores, impresoras, servidores, smartphones) en un área geográfica limitada, como una casa, oficina o un solo edificio.</p>
 <div class="card"><img src="MAN.png"><div class="card-content"><h3>MAN</h3></div></div>
+<p>Una Red de Área Metropolitana (MAN, por sus siglas en inglés) es una red de alta velocidad que conecta múltiples redes LAN dentro de un área geográfica extensa, como una ciudad, municipio o campus grande. Funciona conectando sedes dispersas, utilizando principalmente fibra óptica para ofrecer baja latencia y alta eficiencia.</p>
 <div class="card"><img src="WAN.png"><div class="card-content"><h3>WAN</h3></div></div>
+<p>Una red de área amplia (WAN, por sus siglas en inglés) es una red de computadoras que conecta grupos de equipos a largas distancias geográficas, abarcando ciudades, países o continentes.</p>
 </div>
 </section>
 
@@ -160,21 +165,27 @@ footer{
 <tr><th>Tipo</th><th>Descripción</th></tr>
 <tr><td>Bus</td><td>Canal único</td></tr>
 <tr><td>Estrella</td><td>Con switch</td></tr>
+<tr><td>Malla</td><td>Alta redundancia</td></tr>
 </table>
 </section>
 
 <section id="medios">
 <h2>Medios de Conexión</h2>
-<div class="grid">
-<div class="card"><img src="par.jpg"><div class="card-content"><h3>Ethernet</h3></div></div>
-</div>
+<div class="card"><img src="par.jpg" height="300" width="300"><div><h3>Ethernet</h3></div></div>
+<p>Ethernet es la tecnología estándar cableada para redes de área local (LAN), definida por el protocolo IEEE 802.3.</p>
+<div class="card"><img src="wifi.jpg" height="300" width="300"><div><h3>WiFi</h3></div></div>
+<p>Wi-Fi es una tecnología de red inalámbrica (IEEE 802.11) que conecta ordenadores, dispositivos móviles y otros equipos a internet o entre sí mediante ondas de radio, eliminando cables físicos.</p>
 </section>
 
 <section id="disp">
 <h2>Dispositivos</h2>
 <div class="grid">
 <div class="card"><div class="card-content"><h3>Router</h3></div></div>
+<p>es un dispositivo fundamental en redes de computadoras que conecta diferentes redes, como una red local (LAN) con Internet, gestionando y dirigiendo el tráfico de datos entre ellas mediante paquetes.</p>
 <div class="card"><div class="card-content"><h3>Switch</h3></div></div>
+<p>es un dispositivo inteligente que conecta múltiples equipos (computadoras, impresoras, servidores) en una red de área local (LAN) mediante cables Ethernet, operando en la capa de enlace de datos (capa 2) del modelo OSI.</p>
+<div class="card"><div class="card-content"><h3>Hub</h3></div></div>
+<p> es un dispositivo básico de red utilizado para interconectar equipos (ordenadores, impresoras) en una LAN.</p>
 </div>
 </section>
 
@@ -182,95 +193,79 @@ footer{
 <h2>Modelo OSI</h2>
 <table>
 <tr><td>Física</td><td>Señales</td></tr>
+<tr><td>Enlace</td><td>Errores</td></tr>
+<tr><td>Red</td><td>IP</td></tr>
 <tr><td>Aplicación</td><td>Usuario</td></tr>
 </table>
 </section>
 
 <section id="arquitectura">
 <h2>Arquitectura</h2>
-<p>Cliente-servidor y P2P...</p>
+
+<img src="arquitectura.jpg">
+
+<h3>Cliente-Servidor</h3>
+<p>Servidor central controla recursos.</p>
+
+<h3>P2P</h3>
+<p>Equipos comparten directamente.</p>
+
+<h3>Híbrida</h3>
+<p>Combinación de ambas.</p>
+
 </section>
 
-
 <section id="ethernet">
-<h2>Conexiones Ethernet</h2>
+<h2>Ethernet y Cableado</h2>
 
-<img src="ethernet.jfif" class="hero-img">
+<img src="ethernet.jpg" height="300" width="500">
+<p>Ethernet es una tecnología estándar para redes de área local (LAN) cableadas que conecta dispositivos (PC, routers, switches) para transmitir datos de forma rápida, segura y estable, superando en fiabilidad al Wi-Fi. Se utiliza para crear redes locales, conectar a Internet y compartir recursos entre equipos.</p>
 
-<p>
-Los cables Ethernet permiten conectar dispositivos en una red LAN utilizando cable UTP.
-Son esenciales para la comunicación entre computadoras, switches y routers.
-</p>
+<h3>Tipos de Cable</h3>
+<div class="grid">
+<div class="card"><img src="directo.jpg"><h3>Directo</h3></div>
+<p>Uso: Conecta dispositivos diferentes.
+Aplicaciones: PC a Switch, Switch a Router, PC a Módem.
+Configuración: Ambos extremos utilizan el mismo estándar (normalmente T568B en ambos lados)</p>
+<div class="card"><img src="cruzado.png"><h3>Cruzado</h3></div>
+Uso: Conecta dispositivos similares.
+Aplicaciones: PC a PC, Switch a Switch, Router a Router.
+Configuración: Un extremo usa el estándar T568A y el otro el T568B. El cable invierte los pares de transmisión y recepción.
+</div>
 
-<h3>🔹 Tipos de Cable</h3>
+<h3>Configuraciones</h3>
+<img src="t568a.jpg">
+<p>La norma T568A sirve para definir el orden específico de los ocho hilos de colores dentro de un cable Ethernet (RJ45), garantizando una conectividad de red uniforme y fiable. Se utiliza principalmente en instalaciones residenciales, proyectos gubernamentales en EE.UU. y para crear cables cruzados al combinarla con el estándar T568B.</p>
+<img src="t568b.png" height="300" width="500">
+<p>La norma T568B es un estándar de cableado para redes Ethernet que define el orden de los ocho hilos de colores en los conectores RJ45. Se utiliza principalmente para crear cables de red directos (patch cables) en instalaciones comerciales y domésticas modernas, permitiendo la conexión de dispositivos como computadoras, routers, switches y módems.</p>
 
+<h3>Herramientas</h3>
 <div class="grid">
 
-<div class="card">
-<img src="directo.jpg">
-<div class="card-content">
-<h3>Cable Directo</h3>
-<p>Mismo estándar en ambos extremos (A-A o B-B). Se usa para PC a switch.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="cruzado.png">
-<div class="card-content">
-<h3>Cable Cruzado</h3>
-<p>Un extremo A y otro B. Se usa para PC a PC.</p>
-</div>
-</div>
+<div class="card"><img src="crimpadora.jpg"><h3>Crimpadora</h3></div>
+<div class="card"><img src="pelador.jpg"><h3>Pelador</h3></div>
+<div class="card"><img src="tester.jpg"><h3>Tester</h3></div>
+<div class="card"><img src="rj45.jpg"><h3>RJ45</h3></div>
+<div class="card"><img src="tijeras.jpg"><h3>Cortador</h3></div>
+<div class="card"><img src="ponchadora.jpg"><h3>Ponchadora</h3></div>
+<div class="card"><img src="keystone.jpg"><h3>Keystone</h3></div>
+<div class="card"><img src="patchpanel.jpg"><h3>Patch Panel</h3></div>
+<div class="card"><img src="pasacables.jpg"><h3>Pasacables</h3></div>
+<div class="card"><img src="testerpro.jpg"><h3>Tester Pro</h3></div>
 
 </div>
 
-<h3>🔹 Diferencia Visual</h3>
-<img src="diferencia.jpg" class="hero-img">
+<h3>Pasos</h3>
+<ol>
+<li>Pelar cable</li>
+<li>Ordenar colores</li>
+<li>Insertar RJ45</li>
+<li>Crimpar</li>
+<li>Probar</li>
+</ol>
 
-<h3>🔹 Configuración T568A</h3>
-<img src="t568a.jfif" class="hero-img">
-<table>
-<tr><th>Pin</th><th>Color</th></tr>
-<tr><td>1</td><td>Blanco/Verde</td></tr>
-<tr><td>2</td><td>Verde</td></tr>
-<tr><td>3</td><td>Blanco/Naranja</td></tr>
-<tr><td>4</td><td>Azul</td></tr>
-<tr><td>5</td><td>Blanco/Azul</td></tr>
-<tr><td>6</td><td>Naranja</td></tr>
-<tr><td>7</td><td>Blanco/Marrón</td></tr>
-<tr><td>8</td><td>Marrón</td></tr>
-</table>
-
-<h3>🔹 Configuración T568B</h3>
-<img src="t568b.png" class="hero-img">
-<table>
-<tr><th>Pin</th><th>Color</th></tr>
-<tr><td>1</td><td>Blanco/Naranja</td></tr>
-<tr><td>2</td><td>Naranja</td></tr>
-<tr><td>3</td><td>Blanco/Verde</td></tr>
-<tr><td>4</td><td>Azul</td></tr>
-<tr><td>5</td><td>Blanco/Azul</td></tr>
-<tr><td>6</td><td>Verde</td></tr>
-<tr><td>7</td><td>Blanco/Marrón</td></tr>
-<tr><td>8</td><td>Marrón</td></tr>
-</table>
-
-<h3>🔹 Uso de los cables</h3>
-<table>
-<tr><th>Conexión</th><th>Tipo</th></tr>
-<tr><td>PC a Switch</td><td>Directo</td></tr>
-<tr><td>PC a PC</td><td>Cruzado</td></tr>
-</table>
-
-<h3>🎥 Video Explicativo</h3>
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/3QhU9jd03a0"
-frameborder="0" allowfullscreen></iframe>
-
-<p>
-<a href="https://www.youtube.com/watch?v=3QhU9jd03a0" target="_blank">
-Ver video en YouTube
-</a>
-</p>
+<h3>Video</h3>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/3QhU9jd03a0"></iframe>
 
 </section>
 
