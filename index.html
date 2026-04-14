@@ -103,10 +103,6 @@ table{
 td,th{
     padding:10px;
     border-bottom:1px solid #333;
-}
-
-.topo td:nth-child(2),
-.osi td:nth-child(2){
     text-align:center;
 }
 
@@ -120,122 +116,106 @@ footer{
 <body>
 
 <nav>
-<a href="#origen">Origen</a>
-<a href="#def">Definición</a>
-<a href="#tipos">Tipos</a>
-<a href="#topo">Topologías</a>
-<a href="#medios">Medios</a>
-<a href="#disp">Dispositivos</a>
-<a href="#osi">OSI</a>
-<a href="#arquitectura">Arquitectura</a>
 <a href="#ethernet">Ethernet</a>
 </nav>
 
 <header>
 <h1>Redes <span>de Computadoras</span></h1>
-<p>Guía completa sobre comunicación digital y redes</p>
+<p>Guía completa sobre cables Ethernet</p>
 </header>
 
-<section id="origen">
-<h2>Origen</h2>
-<img src="origen.png" class="hero-img">
-<p>Las redes de computadoras surgieron...</p>
-</section>
-
-<section id="def">
-<h2>Definición</h2>
-<img src="redes.jpg" class="hero-img">
-<p>Una red de computadoras es un conjunto...</p>
-</section>
-
-<section id="tipos">
-<h2>Tipos de Redes</h2>
-<div class="grid">
-<div class="card"><img src="PAN.jpg"><div class="card-content"><h3>PAN</h3></div></div>
-<div class="card"><img src="LAN.png"><div class="card-content"><h3>LAN</h3></div></div>
-<div class="card"><img src="MAN.png"><div class="card-content"><h3>MAN</h3></div></div>
-<div class="card"><img src="WAN.png"><div class="card-content"><h3>WAN</h3></div></div>
-</div>
-</section>
-
-<section id="topo">
-<h2>Topologías</h2>
-<table class="topo">
-<tr><th>Tipo</th><th>Descripción</th></tr>
-<tr><td>Bus</td><td>Canal único</td></tr>
-<tr><td>Estrella</td><td>Con switch</td></tr>
-</table>
-</section>
-
-<section id="medios">
-<h2>Medios de Conexión</h2>
-<div class="grid">
-<div class="card"><img src="par.jpg"><div class="card-content"><h3>Ethernet</h3></div></div>
-</div>
-</section>
-
-<section id="disp">
-<h2>Dispositivos</h2>
-<div class="grid">
-<div class="card"><div class="card-content"><h3>Router</h3></div></div>
-<div class="card"><div class="card-content"><h3>Switch</h3></div></div>
-</div>
-</section>
-
-<section id="osi">
-<h2>Modelo OSI</h2>
-<table class="osi">
-<tr><td>Física</td><td>Señales</td></tr>
-<tr><td>Aplicación</td><td>Usuario</td></tr>
-</table>
-</section>
-
-<section id="arquitectura">
-<h2>Arquitectura</h2>
-<p>Cliente-servidor y P2P...</p>
-</section>
-
-<!-- 🔥 NUEVA SECCIÓN -->
 <section id="ethernet">
-<h2>Conexiones Ethernet</h2>
+<h2>Todo sobre Cables Ethernet</h2>
+
+<img src="ethernet.jpg" class="hero-img">
 
 <p>
-Las conexiones Ethernet permiten comunicar computadoras mediante cables de red (UTP).
-Existen dos formas comunes de conexión:
+Los cables Ethernet son el medio físico más utilizado en redes LAN. Usan cable UTP (par trenzado)
+para transmitir datos entre dispositivos como computadoras, switches y routers.
 </p>
 
-<h3>🔹 Computadora a Computadora (Cable Cruzado)</h3>
-<p>
-Se utiliza un <b>cable cruzado</b> cuando se conectan directamente dos computadoras sin usar un dispositivo intermedio.
-Este cable intercambia los cables internos para permitir la comunicación.
-</p>
+<h3>🔹 Tipos de Cable Ethernet</h3>
+
+<div class="grid">
+
+<div class="card">
+<img src="directo.jpg">
+<div class="card-content">
+<h3>Cable Directo</h3>
+<p>Mismo estándar en ambos extremos (A-A o B-B). Se usa para PC a switch o router.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="cruzado.jpg">
+<div class="card-content">
+<h3>Cable Cruzado</h3>
+<p>Un extremo A y otro B. Se usa para conectar dos computadoras directamente.</p>
+</div>
+</div>
+
+</div>
+
+<h3>🔹 Diferencia Visual</h3>
+<img src="diferencia.jpg" class="hero-img">
+
+<h3>🔹 Estándares de Cableado</h3>
+
+<p>Existen dos configuraciones: T568A y T568B.</p>
+
+<h3>📊 T568A</h3>
+<img src="t568a.jpg" class="hero-img">
+
+<table>
+<tr><th>Pin</th><th>Color</th></tr>
+<tr><td>1</td><td>Blanco/Verde</td></tr>
+<tr><td>2</td><td>Verde</td></tr>
+<tr><td>3</td><td>Blanco/Naranja</td></tr>
+<tr><td>4</td><td>Azul</td></tr>
+<tr><td>5</td><td>Blanco/Azul</td></tr>
+<tr><td>6</td><td>Naranja</td></tr>
+<tr><td>7</td><td>Blanco/Marrón</td></tr>
+<tr><td>8</td><td>Marrón</td></tr>
+</table>
+
+<h3>📊 T568B</h3>
+<img src="t568b.jpg" class="hero-img">
+
+<table>
+<tr><th>Pin</th><th>Color</th></tr>
+<tr><td>1</td><td>Blanco/Naranja</td></tr>
+<tr><td>2</td><td>Naranja</td></tr>
+<tr><td>3</td><td>Blanco/Verde</td></tr>
+<tr><td>4</td><td>Azul</td></tr>
+<tr><td>5</td><td>Blanco/Azul</td></tr>
+<tr><td>6</td><td>Verde</td></tr>
+<tr><td>7</td><td>Blanco/Marrón</td></tr>
+<tr><td>8</td><td>Marrón</td></tr>
+</table>
+
+<h3>🔹 ¿Cómo identificar los cables?</h3>
 
 <ul>
-<li>No requiere switch ni router</li>
-<li>Ideal para compartir archivos</li>
-<li>Configuración manual de IP</li>
+<li><b>Directo:</b> Ambos extremos iguales</li>
+<li><b>Cruzado:</b> Diferentes (A y B)</li>
 </ul>
 
-<h3>🔹 Computadora a Concentrador (Switch/Hub)</h3>
-<p>
-Se utiliza un <b>cable directo</b> para conectar una computadora a un switch o hub.
-Es el método más utilizado en redes domésticas y escolares.
-</p>
+<h3>🔹 Uso de cada cable</h3>
 
-<ul>
-<li>Permite conectar varios equipos</li>
-<li>Acceso a internet</li>
-<li>Configuración automática</li>
-</ul>
+<table>
+<tr><th>Conexión</th><th>Tipo de Cable</th></tr>
+<tr><td>PC a Switch</td><td>Directo</td></tr>
+<tr><td>PC a Router</td><td>Directo</td></tr>
+<tr><td>PC a PC</td><td>Cruzado</td></tr>
+<tr><td>Switch a Switch</td><td>Cruzado</td></tr>
+</table>
 
 <h3>🎥 Video Explicativo</h3>
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/3QhU9jd03a0" 
-title="Cable cruzado y directo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/3QhU9jd03a0"
+frameborder="0" allowfullscreen></iframe>
 
 <p>
-Enlace directo:
-<br>
 <a href="https://www.youtube.com/watch?v=3QhU9jd03a0" target="_blank">
 Ver video en YouTube
 </a>
