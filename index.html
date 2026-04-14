@@ -103,10 +103,6 @@ table{
 td,th{
     padding:10px;
     border-bottom:1px solid #333;
-}
-
-.topo td:nth-child(2),
-.osi td:nth-child(2){
     text-align:center;
 }
 
@@ -160,7 +156,7 @@ footer{
 
 <section id="topo">
 <h2>Topologías</h2>
-<table class="topo">
+<table>
 <tr><th>Tipo</th><th>Descripción</th></tr>
 <tr><td>Bus</td><td>Canal único</td></tr>
 <tr><td>Estrella</td><td>Con switch</td></tr>
@@ -184,7 +180,7 @@ footer{
 
 <section id="osi">
 <h2>Modelo OSI</h2>
-<table class="osi">
+<table>
 <tr><td>Física</td><td>Señales</td></tr>
 <tr><td>Aplicación</td><td>Usuario</td></tr>
 </table>
@@ -198,40 +194,45 @@ footer{
 <section id="ethernet">
 <h2>Conexiones Ethernet</h2>
 
-<p>
-Las conexiones Ethernet permiten comunicar computadoras mediante cables de red (UTP).
-Existen dos formas comunes de conexión:
-</p>
+<p>Las conexiones Ethernet utilizan cables UTP con estándares T568A y T568B.</p>
 
-<h3>🔹 Computadora a Computadora (Cable Cruzado)</h3>
-<p>
-Se utiliza un <b>cable cruzado</b> cuando se conectan directamente dos computadoras sin usar un dispositivo intermedio.
-Este cable intercambia los cables internos para permitir la comunicación.
-</p>
+<h3>🔹 Cable Directo</h3>
+<p>Se usa el mismo estándar en ambos extremos (A-A o B-B).</p>
 
-<ul>
-<li>No requiere switch ni router</li>
-<li>Ideal para compartir archivos</li>
-<li>Configuración manual de IP</li>
-</ul>
+<h3>🔹 Cable Cruzado</h3>
+<p>Se usa un extremo A y otro B para cruzar señales.</p>
 
-<h3>🔹 Computadora a Concentrador (Switch/Hub)</h3>
-<p>
-Se utiliza un <b>cable directo</b> para conectar una computadora a un switch o hub.
-Es el método más utilizado en redes domésticas y escolares.
-</p>
+<h3>📊 Configuración T568A</h3>
+<table>
+<tr><th>Pin</th><th>Color</th></tr>
+<tr><td>1</td><td>Blanco/Verde</td></tr>
+<tr><td>2</td><td>Verde</td></tr>
+<tr><td>3</td><td>Blanco/Naranja</td></tr>
+<tr><td>4</td><td>Azul</td></tr>
+<tr><td>5</td><td>Blanco/Azul</td></tr>
+<tr><td>6</td><td>Naranja</td></tr>
+<tr><td>7</td><td>Blanco/Marrón</td></tr>
+<tr><td>8</td><td>Marrón</td></tr>
+</table>
 
-<ul>
-<li>Permite conectar varios equipos</li>
-<li>Acceso a internet</li>
-<li>Configuración automática</li>
-</ul>
-<img src="cables.jfif"> 
+<h3>📊 Configuración T568B</h3>
+<table>
+<tr><th>Pin</th><th>Color</th></tr>
+<tr><td>1</td><td>Blanco/Naranja</td></tr>
+<tr><td>2</td><td>Naranja</td></tr>
+<tr><td>3</td><td>Blanco/Verde</td></tr>
+<tr><td>4</td><td>Azul</td></tr>
+<tr><td>5</td><td>Blanco/Azul</td></tr>
+<tr><td>6</td><td>Verde</td></tr>
+<tr><td>7</td><td>Blanco/Marrón</td></tr>
+<tr><td>8</td><td>Marrón</td></tr>
+</table>
 
-<h3>Video Explicativo</h3>
+<img src="cables.jfif">
 
+<h3>🎥 Video Explicativo</h3>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/3QhU9jd03a0" 
-title="Cable cruzado y directo" frameborder="0" allowfullscreen></iframe>
+frameborder="0" allowfullscreen></iframe>
 
 </section>
 
